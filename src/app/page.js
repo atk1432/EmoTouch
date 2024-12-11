@@ -1,9 +1,9 @@
-import Image from "next/image";
+import Introdution from "./introduction";
+import Describe from "./whatisthis";
 
 export default function Home() {
-    return (
-        <div className="bg-green-400">
-            
-        </div>
-    );
+  return (<>
+    <Introdution />
+    <Describe />
+  </>);
 }
