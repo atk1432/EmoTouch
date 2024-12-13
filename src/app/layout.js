@@ -1,5 +1,6 @@
 import { AR_One_Sans, Afacad_Flux, Advent_Pro } from "next/font/google"
 import BodyLayout from "./bodyLayout";
+import Footer from "./footer";
 import "./globals.css";
 
 
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
       </div>
       <div className="h-28"></div>
       {children}
+      <Footer />
     </body>
     </html>
   );

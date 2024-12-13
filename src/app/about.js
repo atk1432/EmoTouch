@@ -12,11 +12,11 @@ export default function About() {
   ]
 
   return (
-    <div className="flex flex-col justify-center px-24">
+    <div className="flex flex-col justify-center px-10 sm:px-14 md:px-24">
       <Title>Về chúng tôi</Title>
-      <div className="grid grid-cols-5 justify-items-center my-20">
+      <div className="flex flex-wrap justify-evenly gap-4 my-10">
         { people.map((person) => (
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col self-center items-center">
             <Image 
               src={ person.imgLink }  
               className="rounded-full border-2 border-green-900 max-w-36" 
