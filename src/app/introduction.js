@@ -1,5 +1,6 @@
 import Image from "next/image";
 import bgPic from "../../public/background.jpg"
+import Link from "next/link";
 
 export default function Introdution() {
   return (
@@ -11,8 +12,8 @@ export default function Introdution() {
         <p className="my-7 text-lg sm:text-xl max-w-96">Sứ mệnh của E-Mind là trở thành cầu nối, 
             giúp mỗi cá nhân hiểu mình hơn và cùng nhau
             xây dựng một xã hội biết trân trọng sức khỏe tinh thần.</p>
-        <a className="text-xl text-white cursor-pointer hover:bg-green-600
-          transition bg-green-400 rounded-lg p-3">Câu hỏi đánh giá</a>
+        <Link href="mindtest" className="text-xl text-white cursor-pointer hover:bg-green-600
+          transition bg-green-400 rounded-lg p-3">Câu hỏi đánh giá</Link>
       </div>
       <div className="hidden sm:block sm:n sm:static top-0 right-7 scale-125  -z-10">
         <Image src={ bgPic } alt="background" className="sm:scale-100 " />

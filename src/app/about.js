@@ -16,7 +16,7 @@ export default function About() {
       <Title>Về chúng tôi</Title>
       <div className="flex flex-wrap justify-evenly gap-4 my-10">
         { people.map((person) => (
-          <div className="flex flex-col self-center items-center">
+          <div key={ person.id } className="flex flex-col self-center items-center">
             <Image 
               src={ person.imgLink }  
               className="rounded-full border-2 border-green-900 max-w-36" 

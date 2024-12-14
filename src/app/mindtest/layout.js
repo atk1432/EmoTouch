@@ -1,15 +1,16 @@
+import { Afacad_Flux } from "next/font/google"
 
+const afacadFlux = Afacad_Flux({
+  weight: '500',
+  subsets: ['latin'],
+  display: 'swap'
+})
 
 export default function TestLayout({ children }) {
   return (
-    <html lang="en">
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="/>
-    </head>
-    <body className={ afacadFlux.className }>
+  <div className="flex justify-center items-center bg-slate-400 h-full w-full fixed">
+    <div className="flex justify-center w-full">
       {children}
-    </body>
-    </html>
-  )
+    </div>
+  </div>)
 }
