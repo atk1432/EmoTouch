@@ -8,7 +8,7 @@ const afacadFlux = Afacad_Flux({
 
 export default function TestLayout({ children }) {
   return (
-  <div className="flex justify-center items-center bg-slate-400 h-full w-full fixed">
+  <div className="flex justify-center items-center bg-slate-300 h-full w-full fixed">
     <div className="flex justify-center w-full">
       {children}
     </div>
