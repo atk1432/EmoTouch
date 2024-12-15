@@ -1,4 +1,5 @@
 import { Afacad_Flux } from "next/font/google"
+import { Logo } from "../extension"
 
 const afacadFlux = Afacad_Flux({
   weight: '500',
@@ -8,7 +9,8 @@ const afacadFlux = Afacad_Flux({
 
 export default function TestLayout({ children }) {
   return (
-  <div className="flex justify-center items-center bg-slate-300 h-full w-full fixed">
+  <div className="flex justify-center flex-col items-center bg-slate-300 h-full w-full fixed">
+    <Logo className="mb-10 block" />
     <div className="flex justify-center w-full">
       {children}
     </div>

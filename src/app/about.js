@@ -1,4 +1,4 @@
-import Title from "./extension"
+import { Title } from "./extension"
 import Image from "next/image"
 import avatarPic from "../../public/avatar.jpg"
 

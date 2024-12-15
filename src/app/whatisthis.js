@@ -1,5 +1,5 @@
 import Image from "next/image"
-import Title from "./extension"
+import { Title } from "./extension"
 import aiPic from "../../public/ai.png"
 
 export default function Describe() {

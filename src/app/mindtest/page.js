@@ -53,7 +53,8 @@ export default function Test() {
             <button 
               onClick={ () => {
                 if (choiceAnswer != null) {
-                  checkAnswer(currentQuestion, choiceAnswer, scores)
+                  // console.log(choiceAnswer)
+                  checkAnswer(currentQuestion, choiceAnswer, scores.current)
                   setCurrentQuestion(currentQuestion + 1) 
                   setChoiceAnswer(null)
                 }
@@ -66,9 +67,14 @@ export default function Test() {
             </button>
           </> :
           <>
+            {/* { console.log(scores) } */}
             <h1 className="text-xl self-center flex">
               <p className="underline underline-offset-1 mr-2">Kết quả: </p> 
-              { classifyDepression(scores.scores3, scores.score2, 2 * scores.score1)
+              {classifyDepression(
+                scores.current.score3, 
+                scores.current.score2, 
+                2 * scores.current.score1
+              )
               }
             </h1>
             <button 

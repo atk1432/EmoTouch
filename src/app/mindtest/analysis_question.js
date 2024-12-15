@@ -162,6 +162,6 @@ export function classifyDepression(chenScore, psqiScore, dass21Score) {
       } else {
           return "Trầm cảm nghiêm trọng";
       }
-  }
+    }
   }
 }
