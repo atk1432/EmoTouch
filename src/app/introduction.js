@@ -13,7 +13,7 @@ export default function Introdution() {
             giúp mỗi cá nhân hiểu mình hơn và cùng nhau
             xây dựng một xã hội biết trân trọng sức khỏe tinh thần.</p>
         <Link href="mindtest" className="text-xl text-white cursor-pointer hover:bg-green-600
-          transition bg-green-400 rounded-lg p-3">Câu hỏi đánh giá</Link>
+          transition bg-green-400 rounded-lg p-3">Làm bài kiểm tra</Link>
       </div>
       <div className="hidden sm:block sm:n sm:static top-0 right-7 scale-125  -z-10">
         <Image src={ bgPic } alt="background" className="sm:scale-100 " />

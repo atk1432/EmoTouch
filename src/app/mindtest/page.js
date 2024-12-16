@@ -3,15 +3,16 @@
 import Question from "./question"
 import Answer from "./answer"
 import { useState, useRef } from "react"
-import QuestionData from "../../../api/questions.json"
 import { checkAnswer, classifyDepression } from "./analysis_question"
+import QuestionData from "../../../api/questions.json"
 
 
-export default function Test() {
-  const questions = QuestionData
+export default function Test({ type }) {
+  const typeQuestion = import("../../../api/tools/" + type + ".json")
+  const questions = typeQuestion.questions
 
-  const [ currentQuestion, setCurrentQuestion ] = useState(0)
-  const [ choiceAnswer, setChoiceAnswer ] = useState(null)
+  const [ currentQuestion, setCurrentQuestion ] = useState(0) 
+  const [ choiceAnswer, setChoiceAnswer ] = useState(null) // 0, 1, 2, 3
   const [ start, setStart ] = useState(true)
   const scores = useRef({
     score1: 0, score2: 0, score3: 0
@@ -24,12 +25,11 @@ export default function Test() {
   }
 
   return (
-    <div className="p-6 sm:p-11 w-11/12 sm:w-8/12 bg-white border-black border flex flex-col">
+    <div className="bg-white flex flex-col">
       { start ?           
         <button 
           onClick={ () => setStart(false) }
-          className="hover:bg-yellow-500 bg-yellow-300  \
-            p-3 px-5 self-center rounded-md border transition" 
+          className="button-question"
         >
           Bắt đầu 
         </button> :
@@ -70,12 +70,6 @@ export default function Test() {
             {/* { console.log(scores) } */}
             <h1 className="text-xl self-center flex">
               <p className="underline underline-offset-1 mr-2">Kết quả: </p> 
-              {classifyDepression(
-                scores.current.score3, 
-                scores.current.score2, 
-                2 * scores.current.score1
-              )
-              }
             </h1>
             <button 
               onClick={ () => {

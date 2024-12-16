@@ -1,18 +1,15 @@
-import { Afacad_Flux } from "next/font/google"
 import { Logo } from "../extension"
+import Introduction from "./introduction"
+import Test from "./page"
 
-const afacadFlux = Afacad_Flux({
-  weight: '500',
-  subsets: ['latin'],
-  display: 'swap'
-})
 
 export default function TestLayout({ children }) {
   return (
-  <div className="flex justify-center flex-col items-center bg-slate-300 h-full w-full fixed">
-    <Logo className="mb-10 block" />
-    <div className="flex justify-center w-full">
-      {children}
+    <div className="flex flex-col p-res items-center justify-center w-full mb-24">
+      <div className="question border mb-9">
+        <Introduction type="dass21" />
+        <Test type="dass21" />
+      </div>
     </div>
-  </div>)
+  )
 }

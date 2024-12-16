@@ -1,5 +1,4 @@
-import Link from "next/link"
-import { clearScreenDown } from "readline"
+import Link from "next/link"  
 
 export function Title({ children }) {
   return (
