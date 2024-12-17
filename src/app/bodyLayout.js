@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { Logo } from "./extension"
+import { Logo, TLU } from "./extension"
 
 export default function BodyLayout() {
   const [ barHidden, setBarHidden ] = useState(true)
@@ -35,14 +35,9 @@ export default function BodyLayout() {
     }
   })
 
-  // console.log()
-
-  // if (currentUrl == '/mindtest')
-  //   return (<></>)
-  // else 
     return (
     <>
-      <div className="z-50 fixed border-b w-full flex justify-between text-xl font-semibold p-res bg-white">
+      <div className="z-50 fixed border-b w-full flex justify-between items-center text-xl font-semibold p-res bg-white">
         <Logo />
         <div 
           className={ 
@@ -54,12 +49,17 @@ export default function BodyLayout() {
               key={link.id} 
               href={link.path}
               className={(barHidden ? "" : "m-3 mx-6 w-full") 
-                + "mx-4 hover:text-blue-600 transition"}>
+                + "flex items-center mx-4 hover:text-blue-600 transition"}>
               { link.name }</Link>
           )) }
+          <TLU className="hidden md:block" />
         </div>
-        <div className="md:hidden" onClick={ barClick }>
-          <i className="cursor-pointer fa-solid fa-bars"></i>
+        <div className="flex items-center md:hidden">
+          <i 
+            className="cursor-pointer fa-solid fa-bars"
+            onClick={ barClick }
+          ></i>
+          <TLU className="block md:hidden" />
         </div> 
       </div>
       <div className="h-28"></div>

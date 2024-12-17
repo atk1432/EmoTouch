@@ -1,6 +1,9 @@
-import Q from "../../../api/questionnaires.json"
+'use client'
 
-export default function Introduction({ type })  {
+import Q from "@/../api/questionnaires.json"
+import { memo } from "react"
+
+function Introduction({ type })  {
   const tool = Q[type]
 
   return (
@@ -14,3 +17,5 @@ export default function Introduction({ type })  {
     </div>
   )
 }
+
+export default memo(Introduction)

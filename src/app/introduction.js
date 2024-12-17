@@ -12,7 +12,7 @@ export default function Introdution() {
         <p className="my-7 text-lg sm:text-xl max-w-96">Sứ mệnh của E-Mind là trở thành cầu nối, 
             giúp mỗi cá nhân hiểu mình hơn và cùng nhau
             xây dựng một xã hội biết trân trọng sức khỏe tinh thần.</p>
-        <Link href="mindtest" className="text-xl text-white cursor-pointer hover:bg-green-600
+        <Link href="mindtest/dass21" className="text-xl text-white cursor-pointer hover:bg-green-600
           transition bg-green-400 rounded-lg p-3">Làm bài kiểm tra</Link>
       </div>
       <div className="hidden sm:block sm:n sm:static top-0 right-7 scale-125  -z-10">

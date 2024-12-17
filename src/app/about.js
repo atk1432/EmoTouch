@@ -1,28 +1,23 @@
 import { Title } from "./extension"
 import Image from "next/image"
 import avatarPic from "../../public/avatar.jpg"
+import people from "@/pages/api/about.json"
 
 export default function About() {
-  const people = [
-    { id: 1, name: 'Your name here', imgLink: avatarPic },
-    { id: 2, name: 'Your name here', imgLink: avatarPic },
-    { id: 3, name: 'Your name here', imgLink: avatarPic },
-    { id: 4, name: 'Your name here', imgLink: avatarPic },    
-    { id: 5, name: 'Your name here', imgLink: avatarPic }
-  ]
-
   return (
     <div className="flex flex-col justify-center px-10 sm:px-14 md:px-24">
       <Title>Về chúng tôi</Title>
-      <div className="flex flex-wrap justify-evenly gap-4 my-10">
+      <div className="flex flex-wrap items-start justify-around gap-4 my-10">
         { people.map((person) => (
-          <div key={ person.id } className="flex flex-col self-center items-center">
+          <div key={ person.id } className="flex flex-col items-center h-full place-content-start ">
             <Image 
-              src={ person.imgLink }  
               className="rounded-full border-2 border-green-900 max-w-36" 
+              src={ person.imgLink }
+              width={100} height={100}
               alt="avatar" 
             />
-            <div>{ person.name }</div>
+            <div className="opacity-80 mt-2 max-w-24 text-xs text-center ">{ person.describe }</div>
+            <div className="">{ person.name }</div>
           </div>
         )) }
       </div>
