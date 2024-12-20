@@ -40,5 +40,11 @@
         "name": "Ts Nguyễn Thị Oanh", 
         "describe": "Mentor dự án",
         "imgLink": "/avatar7.jpg" 
+    },
+    {
+        "id": 8,
+        "name": "Ts Nguyễn Đình Trinh",
+        "describe": "Cố vấn chuyên môn",
+        "imgLink": "/avatar8.png"
     }
 ]

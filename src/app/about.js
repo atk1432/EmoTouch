@@ -11,7 +11,7 @@ export default function About() {
         { people.map((person) => (
           <div key={ person.id } className="flex flex-col items-center h-full place-content-start ">
             <Image 
-              className="rounded-full border-2 border-green-900 max-w-36" 
+              className="rounded-full border-2 border-green-900" 
               src={ person.imgLink }
               width={100} height={100}
               alt="avatar" 
